@@ -1,2 +1,3 @@
 # simple-timer
-Simple Timer &amp; Stop watch
+
+Mission Timer &amp; Stop watch

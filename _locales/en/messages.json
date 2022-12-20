@@ -1,0 +1,51 @@
+{
+  "extension_name": {
+    "message": "Mission Timer",
+    "description": "Extension's name"
+  },
+
+  "extension_short_name": {
+    "message": "Mission Timer",
+    "description": "Extension's short name"
+  },
+
+  "extension_description": {
+    "message": "This is chrome extension for timer.",
+    "description": "Extension's description"
+  },
+
+  "extension_author": {
+    "message": "sddev",
+    "description": "Extension's author"
+  },
+
+  "o_tabs_help": {
+    "message": "Info",
+    "description": "Tab name. Prefix 'o_' for options page"
+  },
+
+  "o_tabs_main": {
+    "message": "Options",
+    "description": "Tab name"
+  },
+
+  "o_error": {
+    "message": "Error",
+    "description": "Error message"
+  },
+
+  "o_saved": {
+    "message": "Saved",
+    "description": "Ok message"
+  },
+
+  "p_optionsBtn": {
+    "message": "Options",
+    "description": "Button hint. Prefix 'p_' for popup page"
+  },
+
+  "p_helpBtn": {
+    "message": "Info",
+    "description": "Button hint"
+  }
+}

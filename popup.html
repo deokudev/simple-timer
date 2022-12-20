@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="lib/bootstrap/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="lib/tabulator/tabulator.min.css"
+    />
+    <link rel="stylesheet" href="css/popup.css" />
+    <script src="js/helpers/html_localizer.js"></script>
+    <script src="js/helpers/chrome_extension_utils.js"></script>
+    <script src="js/storage_with_default.js"></script>
+    <script src="js/helpers/storage_input_binding.js"></script>
+
+    <script src="lib/jQuery/jquery.min.js"></script>
+    <script src="lib/tweenMax/TweenMax.min.js"></script>
+    <script src="lib/tabulator/tabulator.min.js"></script>
+    <script src="js/popup.js"></script>
+    <title>{{extension_name}}</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <span>
+          <img
+            src="icons/app_icon128.png"
+            alt="app_icon_image"
+            title="{{extension_description}}"
+            width="20"
+            height="20"
+          />
+          <strong>{{extension_name}}</strong>
+        </span>
+        <span id="window_actions">
+          <a href="options.html#help" title="{{p_helpBtn}}" target="_blank"
+            >?</a
+          >
+          <a href="options.html" title="{{p_optionsBtn}}" target="_blank"
+            >&#9881;</a
+          >
+        </span>
+      </div>
+      <div class="card-body">
+        <!-- TO-DO : Toolbar 우측 상단 Icon 클릭 시 표시되는 popup html 작성 -->
+        <div class="wrap">
+          <div class="countdown">
+            <div class="bloc-time hours">
+              <span class="count-title">Hours</span>
+
+              <div class="figure hours hours-1">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+
+              <div class="figure hours hours-2">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="bloc-time min">
+              <span class="count-title">Minutes</span>
+
+              <div class="figure min min-1">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+
+              <div class="figure min min-2">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="bloc-time sec">
+              <span class="count-title">Seconds</span>
+
+              <div class="figure sec sec-1">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+
+              <div class="figure sec sec-2">
+                <span class="top">0</span>
+                <span class="top-back">
+                  <span>0</span>
+                </span>
+                <span class="bottom">0</span>
+                <span class="bottom-back">
+                  <span>0</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mb-3">
+            <label for="mission_text" class="form-label">Mission Title</label>
+            <input
+              data-storage="mission_text"
+              type="text"
+              class="form-control"
+              id="mission_text"
+              placeholder=""
+            />
+          </div>
+          <div class="mb-3">
+            <label for="mission_start_hour" class="form-label"
+              >Mission Time</label
+            ><br />
+            <select
+              data-storage="mission_start_hour"
+              class="form-select form-select"
+              id="mission_start_hour"
+              aria-label=".form-select example"
+            >
+              <option value="0">00</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+            </select>
+            <select
+              data-storage="mission_start_minute"
+              class="form-select form-select"
+              id="mission_start_minute"
+              aria-label=".form-select example"
+            >
+              <option value="0">00</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+            </select>
+            <select
+              data-storage="mission_start_second"
+              class="form-select form-select"
+              id="mission_start_second"
+              aria-label=".form-select example"
+            >
+              <option value="0">00</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <!-- hidden -->
+          <button
+            type="submit"
+            id="data-storage-save"
+            class="hidden btn btn-dark btn-sm mt-4"
+          >
+            Apply
+          </button>
+          <button id="mission-start" class="btn btn-dark btn-sm mt-4">
+            Start
+          </button>
+          <button id="mission-pause" class="btn btn-dark btn-sm mt-4">
+            Pause
+          </button>
+          <button id="mission-cancel" class="btn btn-danger btn-sm mt-4">
+            Cancel
+          </button>
+          <button id="mission-complete" class="btn btn-success btn-sm mt-4">
+            Complete
+          </button>
+          <button
+            id="mission-clear-history"
+            class="btn btn-warning btn-sm mt-4"
+          >
+            Clear History
+          </button>
+        </div>
+        <div id="history-table"></div>
+      </div>
+    </div>
+  </body>
+</html>

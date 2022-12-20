@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="lib/bootstrap/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="lib/jsTabs/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/options.css" />
+    <title>{{extension_name}}</title>
+  </head>
+  <body>
+    <div id="message_place">
+      <div id="error" class="alert alert-danger" role="alert">{{o_error}}</div>
+      <div id="success" class="alert alert-success" role="alert">
+        {{o_saved}}
+      </div>
+    </div>
+
+    <div id="page">
+      <header>
+        <img
+          src="icons/app_icon128.png"
+          alt="app_icon_image"
+          title="{{extension_description}}"
+          width="48"
+          height="48"
+        />
+        <strong>{{extension_name}}</strong>
+      </header>
+
+      <section id="main_tabs" class="tabs">
+        <ul class="tabs_nav">
+          <li><a href="#main">{{o_tabs_main}}</a></li>
+          <li><a href="#help">{{o_tabs_help}}</a></li>
+        </ul>
+
+        <div class="tabs_content">
+          <div id="main">
+            <!-- TO-DO : options에 해당하는 값들을 작성-->
+            <!-- EXAMPLE -->
+            <form action="#">
+              <label for="soundAlarmPeriodMinute" class="form-label"
+                >소리 알람 주기(분)</label
+              >
+              <input
+                data-storage="soundAlarmPeriodMinute"
+                type="text"
+                class="form-control"
+                id="soundAlarmPeriodMinute"
+                placeholder=""
+              />
+              <div class="form-check">
+                <input
+                  data-storage="isEnabledSoundAlarm"
+                  type="checkbox"
+                  class="form-check-input dark"
+                  id="isEnabledSoundAlarm"
+                />
+                <label class="form-check-label" for="isEnabledSoundAlarm"
+                  >소리 알람 활성화</label
+                >
+              </div>
+              <button
+                type="submit"
+                id="data-storage-save"
+                class="btn btn-dark mt-4"
+              >
+                적용
+              </button>
+            </form>
+          </div>
+
+          <div id="help">
+            <!-- TO-DO : extension에 대한 설명 및 사용법 -->
+            <div class="jumbotron">
+              <h1 class="display-4">Hello, world!</h1>
+              <p class="lead">This app is mission timer.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">1. 미션 제목을 입력합니다.</li>
+                <li class="list-group-item">2. 미션 제한 시간을 입력합니다.</li>
+                <li class="list-group-item">
+                  3. 미션 시작을 누르고, 미션을 진행합니다.
+                </li>
+                <li class="list-group-item">
+                  4. 미션 수행 사정에 따라, 일시정지 / 완료 / 취소를 누릅니다.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p class="copyright">
+          by <a href="#" target="_blank">{{extension_author}}</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="js/helpers/html_localizer.js"></script>
+    <script src="js/helpers/chrome_extension_utils.js"></script>
+    <script src="lib/jsTabs/tabs.js"></script>
+    <script src="js/storage_with_default.js"></script>
+    <script src="js/helpers/storage_input_binding.js"></script>
+    <script src="js/options.js"></script>
+  </body>
+</html>

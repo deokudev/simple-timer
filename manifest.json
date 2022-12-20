@@ -1,0 +1,44 @@
+{
+  "author": "__MSG_extension_author__",
+
+  "manifest_version": 3,
+
+  "default_locale": "ko",
+
+  "name": "__MSG_extension_name__",
+
+  "short_name": "__MSG_extension_short_name__",
+
+  "description": "__MSG_extension_description__",
+
+  "version": "0.0.1",
+
+  "version_name": "preview",
+
+  "action": {
+    "default_icon": {
+      "16": "icons/app_icon16.png",
+      "24": "icons/app_icon24.png",
+      "32": "icons/app_icon32.png"
+    },
+    "default_title": "Click Me",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "128": "icons/app_icon128.png"
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+
+  "host_permissions": ["http://*/*", "https://*/*"],
+
+  "permissions": ["storage", "tabs", "tts"],
+
+  "background": {
+    "service_worker": "js/background.js"
+  }
+}

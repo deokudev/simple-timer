@@ -1,0 +1,223 @@
+body {
+  width: 720px;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #4a4a4a;
+}
+
+header {
+  font-size: 14px;
+  background-color: #f1f1f1;
+  padding: 6px;
+  border-bottom: 1px solid #dddddd;
+  box-shadow: 0 3px 6px #a9a9a9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+}
+
+#window_actions {
+  float: right;
+  font-size: 13px;
+}
+
+#window_actions a {
+  margin: 0 0 0 12px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+#window_actions a:hover {
+  font-weight: bold;
+}
+
+.card-header {
+  margin-top: 0px;
+}
+
+.menu {
+  margin-bottom: 10px;
+}
+
+/* Global */
+body {
+  background-color: #f2f1ed;
+}
+
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 60px;
+  text-align: center;
+  font: 300 2.25em "Lato";
+  text-transform: uppercase;
+}
+
+h1 strong {
+  font-weight: 400;
+  color: #ea4c4c;
+}
+
+h2 {
+  margin-bottom: 80px;
+  text-align: center;
+  font: 300 0.7em "Lato";
+  text-transform: uppercase;
+}
+
+h2 strong {
+  font-weight: 400;
+}
+
+/* Countdown */
+
+.countdown .bloc-time {
+  float: left;
+  margin-right: 24px;
+  text-align: center;
+
+  /* &:last-child {
+      margin-right: 0;
+    } */
+}
+
+.countdown .count-title {
+  display: block;
+  margin-bottom: 15px;
+  font: normal 0.94em "Lato";
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.countdown .figure > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font: normal 5.94em/107px "Lato";
+  font-weight: 700;
+  color: #de4848;
+}
+
+.countdown .figure .top:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.countdown .figure .bottom-back:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.countdown .figure:last-child {
+  margin-right: 0;
+}
+
+.countdown .figure .top {
+  z-index: 3;
+  background-color: #f7f7f7;
+  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  /* @include border-top-radius(10px);
+      @include transform(perspective(200px)); */
+}
+.countdown .figure .bottom {
+  z-index: 1;
+}
+
+.countdown .figure .bottom:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.countdown .figure .bottom-back {
+  z-index: 2;
+  top: 0;
+  height: 50%;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  /* @include border-top-radius(10px); */
+}
+.countdown .figure .bottom-back span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.countdown .figure .top {
+  height: 50%;
+  overflow: hidden;
+  /* @include backface-visibility(hidden); */
+}
+.countdown .figure .top-back {
+  height: 50%;
+  overflow: hidden;
+  /* @include backface-visibility(hidden); */
+}
+.countdown .figure .top-back {
+  z-index: 4;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  /* @include transform(perspective(200px) rotateX(180deg));
+      @include border-bottom-radius(10px); */
+}
+.countdown .figure .top-back span {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.countdown .figure {
+  position: relative;
+  float: left;
+  height: 110px;
+  width: 100px;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  /* @include box-shadow(
+      0 3px 4px 0 rgba(0, 0, 0, 0.2),
+      inset 2px 4px 0 0 rgba(255, 255, 255, 0.08)
+    ); */
+}
+.countdown {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#history-table {
+  margin-top: 15px;
+}
